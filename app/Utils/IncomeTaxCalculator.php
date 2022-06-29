@@ -14,7 +14,7 @@ class IncomeTaxCalculator
         
         $this->incomeAmount = $incomeAmount;
 
-        $this->incomeTaxSlabs = (new IncomeTaxDTO)->getIncomeTaxSlabs();
+        $this->incomeTaxSlabs = IncomeTaxDTO::getIncomeTaxSlabs();
         
         if(! $this->incomeTaxSlabs[$this->incomeYear]) {
             throw new \Exception("Invalid Year");
